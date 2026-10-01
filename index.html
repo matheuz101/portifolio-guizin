@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio de Guilherme Luiz Silva Edmundo, desenvolvedor web e estudante do Colégio COTEMIG. Projetos com HTML, CSS e JavaScript.">
+  <meta name="theme-color" content="#0B1120">
+  <title>Guilherme Luiz | Desenvolvedor Web</title>
+  <link id="site-favicon" rel="icon" href="assets/images/favicon-gl.png" type="image/png">
+  <link rel="preload" href="assets/fonts/poppins-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Aplique o tema antes de pintar a página.
+    (() => {
+      let saved;
+      try { saved = localStorage.getItem("guilherme-theme"); } catch (_) {}
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = ["light", "dark"].includes(saved) ? saved : (dark ? "dark" : "light");
+    })();
+  </script>
+  <script defer src="assets/js/config.js"></script>
+  <!-- Tilt.js original depende de jQuery; preserve esta ordem. -->
+  <script defer src="assets/vendor/jquery-3.7.1.min.js"></script>
+  <script defer src="assets/vendor/tilt.jquery.min.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24"><path d="m7 6-6 6 6 6m10-12 6 6-6 6m-3-15-4 18"/></symbol>
+      <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+      <symbol id="icon-education" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Zm4 2v6c4 3 8 3 12 0v-6m4-2v7"/></symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14m0-11H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></symbol>
+      <symbol id="icon-down" viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6"/></symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M21 13A9 9 0 0 1 11 3a9 9 0 1 0 10 10Z"/></symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+      <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24"><path d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-2.7c3.3-.4 6.8-1.6 6.8-7.3A5.7 5.7 0 0 0 19.3 4a5.3 5.3 0 0 0-.1-4s-1.3-.4-4.2 1.5a14.5 14.5 0 0 0-7.6 0C4.5-.4 3.2 0 3.2 0a5.3 5.3 0 0 0-.1 4 5.7 5.7 0 0 0-1.5 4c0 5.7 3.5 6.9 6.8 7.3A3.5 3.5 0 0 0 7.5 18v4" transform="translate(1 1) scale(.9)"/></symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7m4 0v-7m0 3a3 3 0 0 1 6 0v4"/><circle cx="7" cy="7" r=".5"/></symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M22 17v3a2 2 0 0 1-2.2 2A20 20 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.7l-1.4 1.4a16 16 0 0 0 6.7 6.7l1.4-1.4a2 2 0 0 1 1.7-.6l3 .5A2 2 0 0 1 22 17Z"/></symbol>
+    </defs>
+  </svg>
+  <aside class="site-sidebar" aria-label="Atalhos do portfólio">
+    <nav id="primary-navigation" class="sidebar-nav" aria-label="Navegação principal">
+      <a class="nav-home is-active" href="#home" aria-label="Início" aria-current="location" data-tooltip="Início">
+        <span class="brand-mark"><span class="nav-logo-fallback" data-initials>GL</span><img id="nav-logo" alt="" width="32" height="32" hidden></span>
+      </a>
+      <a href="#about" aria-label="Sobre" data-tooltip="Sobre"><svg class="icon" aria-hidden="true"><use href="#icon-user"/></svg></a>
+      <a href="#skills" aria-label="Habilidades" data-tooltip="Habilidades"><svg class="icon" aria-hidden="true"><use href="#icon-code"/></svg></a>
+      <a href="#projects" aria-label="Projetos" data-tooltip="Projetos"><svg class="icon" aria-hidden="true"><use href="#icon-grid"/></svg></a>
+      <a href="#education" aria-label="Educação" data-tooltip="Educação"><svg class="icon" aria-hidden="true"><use href="#icon-education"/></svg></a>
+      <a href="#contact" aria-label="Contato" data-tooltip="Contato"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg></a>
+    </nav>
+    <div class="sidebar-theme">
+      <button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="Alternar tema" data-tooltip="Alternar tema"><svg class="icon theme-sun" aria-hidden="true"><use href="#icon-sun"/></svg><svg class="icon theme-moon" aria-hidden="true"><use href="#icon-moon"/></svg></button>
+    </div>
+  </aside>
+  <main id="main-content">
+    <section id="home" class="hero section" aria-labelledby="home-title">
+      <div class="container hero-container">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow greeting"><span class="greeting-line" aria-hidden="true"></span>Olá, eu sou</p>
+          <h1 id="home-title"><span>Guilherme Luiz</span><span>Silva Edmundo</span></h1>
+          <p class="hero-role" data-role>Desenvolvedor Web</p>
+          <p class="hero-description" data-introduction>Estudante do COTEMIG, desenvolvendo projetos com HTML, CSS e JavaScript.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Ver projetos <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+            <a class="button button-outline" href="#contact">Vamos conversar</a>
+          </div>
+        </div>
+        <!-- Revelação no wrapper; tilt somente na moldura interna. -->
+        <div class="hero-portrait portrait-reveal" data-reveal>
+          <div class="portrait portrait-home" data-tilt-frame data-photo="home">
+            <div class="portrait-placeholder"><span class="portrait-initials" data-initials>GL</span><span class="portrait-placeholder-label">Retrato em breve</span></div>
+            <img class="portrait-image" alt="Retrato de Guilherme Luiz" width="400" height="500" hidden>
+            <span class="portrait-corner" aria-hidden="true"></span>
+          </div>
+          <p class="portrait-caption"><span aria-hidden="true">&lt;/&gt;</span> <span data-role>Desenvolvedor Web</span></p>
+        </div>
+
+        <div class="hero-socials" aria-label="Redes sociais">
+          <a class="social-link" data-link="github" aria-disabled="true" tabindex="-1" aria-label="GitHub — Em breve" data-tooltip="GitHub · Em breve"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg></a>
+          <a class="social-link" data-link="linkedin" aria-disabled="true" tabindex="-1" aria-label="LinkedIn — Em breve" data-tooltip="LinkedIn · Em breve"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg></a>
+          <span class="social-line" aria-hidden="true"></span>
+        </div>
+        <a class="scroll-cue" href="#about"><span>Conheça mais</span><svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a>
+      </div>
+    </section>
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-heading" data-reveal><p class="eyebrow">Um pouco de mim</p><h2 id="about-title">Sobre <span>mim</span></h2></header>
+        <div class="about-layout">
+          <div class="about-portrait portrait-reveal" data-reveal>
+            <div class="portrait portrait-about" data-tilt-frame data-photo="about">
+              <div class="portrait-placeholder"><span class="portrait-initials" data-initials>GL</span><span class="portrait-placeholder-label">Retrato em breve</span></div>
+              <img class="portrait-image" alt="Guilherme Luiz" width="400" height="500" loading="lazy" hidden>
+            </div>
+          </div>
+          <div class="about-copy" data-reveal>
+            <p>Sou <strong data-full-name>Guilherme Luiz Silva Edmundo</strong>, desenvolvedor web e estudante do <strong data-institution>Colégio COTEMIG</strong>, com conclusão prevista para <strong data-completion>dezembro de 2027</strong>. Desenvolvo projetos utilizando <strong>HTML, CSS e JavaScript</strong> e utilizo o <strong>GitHub</strong> para disponibilizar meus trabalhos.</p>
+            <p>Este portfólio reúne meus projetos e minha trajetória de aprendizado em desenvolvimento web.</p>
+            <div class="about-tags" aria-label="Tecnologias e formação"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-institution>Colégio COTEMIG</span></div>
+            <a class="text-link" href="#projects">Conheça os projetos <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-heading" data-reveal><p class="eyebrow">Explore minhas</p><h2 id="skills-title">Habilidades</h2></header>
+        <div class="skills-groups">
+          <div class="skill-group" data-reveal>
+            <h3>Linguagens de programação</h3>
+            <div class="skills-grid">
+              <article class="skill-card"><div class="skill-mark"><img src="imgs/c%23-black.png" width="56" height="56" alt="" loading="lazy"></div><h4>C#</h4></article>
+            </div>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Desenvolvimento Web</h3>
+            <div class="skills-grid">
+              <article class="skill-card"><div class="skill-mark"><img src="imgs/html-black.png" width="56" height="56" alt="" loading="lazy"></div><h4>HTML</h4></article>
+              <article class="skill-card"><div class="skill-mark css-mark" aria-hidden="true"><svg viewBox="0 0 80 90"><path fill="currentColor" d="M5 0h70l-6 78-29 9-29-9Z"/><path fill="var(--surface)" d="M20 17h42l-4 48-18 5-17-5-1-14h10l1 7 7 2 8-2 1-11H25l-1-10h26l1-10H21Z"/></svg></div><h4>CSS</h4></article>
+              <article class="skill-card"><div class="skill-mark"><img src="imgs/js-black.png" width="56" height="56" alt="" loading="lazy"></div><h4>JavaScript</h4></article>
+            </div>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Banco de dados</h3>
+            <div class="skills-grid">
+              <article class="skill-card"><div class="skill-mark skill-mark-wide"><img src="imgs/mysql-black.png" width="80" height="56" alt="" loading="lazy"></div><h4>MySQL</h4></article>
+            </div>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Ferramentas e publicação</h3>
+            <div class="skills-grid">
+              <article class="skill-card"><div class="skill-mark"><img src="imgs/github-black.png" width="56" height="56" alt="" loading="lazy"></div><h4>GitHub</h4></article>
+              <article class="skill-card"><div class="skill-mark"><img src="imgs/figma-black.png" width="56" height="56" alt="" loading="lazy"></div><h4>Figma</h4></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-heading" data-reveal><p class="eyebrow">Do aprendizado à prática</p><h2 id="projects-title">Meus <span>projetos</span></h2><p class="section-description">Os projetos serão adicionados em breve.</p></header>
+        <div id="project-list" class="project-list"></div>
+        <noscript><p class="empty-state">Ative o JavaScript para visualizar os espaços reservados para projetos.</p></noscript>
+      </div>
+    </section>
+    <section id="education" class="section" aria-labelledby="education-title">
+      <div class="container education-container">
+        <header class="section-heading" data-reveal><p class="eyebrow">Minha trajetória</p><h2 id="education-title">Educação <span>e formação</span></h2></header>
+        <div class="education-timeline" data-reveal>
+          <article class="education-card">
+            <span class="education-icon" aria-hidden="true"><svg class="icon"><use href="#icon-education"/></svg></span>
+            <div class="education-copy"><span class="status-pill" data-education-status>Formação em andamento</span><h3 data-institution>Colégio COTEMIG</h3><p data-course hidden></p><p class="education-date">Conclusão prevista: <span data-completion>dezembro de 2027</span></p><p class="education-start" data-start-date hidden></p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="container" data-reveal>
+        <header class="section-heading"><p class="eyebrow">Entre em contato</p><h2 id="contact-title">Vamos <span>conversar?</span></h2></header>
+        <button id="contact-open" class="contact-trigger" type="button" aria-haspopup="dialog" aria-controls="contact-modal" aria-expanded="false"><span>Fale comigo</span><span class="contact-plus" aria-hidden="true">+</span></button>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><a class="footer-name" href="#home" data-short-name>Guilherme Luiz</a><p>© <span id="footer-year">2026</span> · Desenvolvido com HTML, CSS e JavaScript.</p></div></footer>
+  <dialog id="contact-modal" class="contact-modal" aria-labelledby="modal-title" aria-describedby="modal-description">
+    <div class="modal-panel">
+      <button id="contact-close" class="modal-close" type="button" aria-label="Fechar contato" autofocus><svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg></button>
+      <header class="modal-heading"><h2 id="modal-title">Vamos conversar</h2><p id="modal-description">Escolha uma forma de contato</p></header>
+      <div class="contact-methods">
+        <a class="contact-method" data-link="email" aria-disabled="true" tabindex="-1"><span class="contact-method-icon"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg></span><span class="contact-method-text"><strong>E-mail</strong><span data-contact-label="email">Em breve</span></span><svg class="icon contact-method-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+        <a class="contact-method" data-link="whatsapp" aria-disabled="true" tabindex="-1"><span class="contact-method-icon"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg></span><span class="contact-method-text"><strong>WhatsApp</strong><span data-contact-label="whatsapp">Em breve</span></span><svg class="icon contact-method-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+        <a class="contact-method" data-link="linkedin" aria-disabled="true" tabindex="-1"><span class="contact-method-icon"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg></span><span class="contact-method-text"><strong>LinkedIn</strong><span data-contact-label="linkedin">Em breve</span></span><svg class="icon contact-method-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+      </div>
+      <form id="contact-form" class="contact-form" novalidate>
+        <h3>Deixe uma mensagem</h3>
+        <div class="form-row">
+          <div class="form-field"><label for="contact-name">Nome</label><input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Seu nome" required minlength="2" maxlength="100" aria-describedby="name-error"><span class="field-error" id="name-error" hidden></span></div>
+          <div class="form-field"><label for="contact-email">E-mail</label><input id="contact-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required maxlength="254" aria-describedby="email-error"><span class="field-error" id="email-error" hidden></span></div>
+        </div>
+        <div class="form-field"><label for="contact-message">Mensagem</label><textarea id="contact-message" name="message" rows="3" placeholder="Sobre o que vamos conversar?" required minlength="10" maxlength="3000" aria-describedby="message-error"></textarea><span class="field-error" id="message-error" hidden></span></div>
+        <button id="contact-submit" class="button button-primary" type="submit" disabled aria-describedby="form-hint"><span>Enviar mensagem</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+        <p id="form-hint" class="form-hint">Em breve · O envio de mensagens ainda não está disponível.</p>
+        <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+      </form>
+    </div>
+  </dialog>
+</body>
+</html>

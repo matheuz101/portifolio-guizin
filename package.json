@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-guilherme-luiz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfólio em HTML, CSS e JavaScript, sem framework.",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "build": "node tools/build.mjs",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2"
+  }
+}

@@ -1,0 +1,65 @@
+/* Edite os dados neste arquivo. Campos vazios ficam indisponíveis no site.
+   Todos os caminhos são relativos ao index.html, inclusive no GitHub Pages. */
+window.PORTFOLIO_CONFIG = {
+  name: "Guilherme Luiz Silva Edmundo",
+  shortName: "Guilherme Luiz",
+  initials: "GL",
+  nameLines: ["Guilherme Luiz", "Silva Edmundo"],
+  role: "Desenvolvedor Web",
+  introduction: "Estudante do COTEMIG, desenvolvendo projetos com HTML, CSS e JavaScript.",
+  education: {
+    institution: "Colégio COTEMIG",
+    status: "Formação em andamento",
+    completion: "dezembro de 2027",
+    course: "Técnico em Informática",
+    startDate: "fevereiro de 2025",
+  },
+  photos: {
+    home: { src: "assets/images/guilherme-home.webp", position: "center 35%" },
+    about: { src: "assets/images/guilherme-about.webp", position: "center 35%" },
+  },
+  favicon: "assets/images/favicon-gl.png", // Arquivo existente; preserve a extensão real.
+  links: {
+    github: "",
+    linkedin: "",
+    email: "",
+    whatsapp: "5531984746166",
+    whatsappLabel: "+55 (31) 98474-6166",
+  },
+  form: {
+    endpoint: "", // URL HTTPS que recebe JSON via POST. Veja README.md.
+    send: null,
+  },
+  projects: [
+    {
+      title: "ESTUDE AI Landing Page",
+      description: "Landing page da  soluçao da minha equipe na produção de nossa startup.",
+      images: [{ src: "imgs/landingpage-estudeAI.png"}],
+      repository: "https://github.com/matheuz101/Estude-AI-landing-page",
+      demo: "https://matheuz101.github.io/Estude-AI-landing-page/", // URL real da demonstração, como GitHub Pages. Não é deduzida.
+      technologies: ["HTML", "CSS", "JavaScript"],
+      publication: "GitHub",
+      provisional: false, // Altere para false após cadastrar um trabalho real.
+    },
+    {
+      title: "Projeto 02 — título a preencher",
+      description: "",
+      images: [],
+      repository: "",
+      demo: "",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      publication: "GitHub",
+      provisional: true,
+    },
+    {
+      title: "Projeto 03 — título a preencher",
+      description: "Espaço reservado para um projeto. A descrição, as capturas e os links serão adicionados em breve.",
+      images: [],
+      repository: "",
+      demo: "",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      publication: "GitHub",
+      provisional: true,
+    },
+  ],
+};
