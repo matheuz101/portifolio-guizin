@@ -15,14 +15,14 @@ window.PORTFOLIO_CONFIG = {
     startDate: "fevereiro de 2025",
   },
   photos: {
-    home: { src: "assets/images/guilherme-home.webp", position: "center 35%" },
-    about: { src: "assets/images/guilherme-about.webp", position: "center 35%" },
+    home: { src: "imgs/photo-me.jpg", position: "center 35%" },
+    about: { src: "imgs/photo-me.jpg", position: "center 35%" },
   },
   favicon: "assets/images/favicon-gl.png", // Arquivo existente; preserve a extensão real.
   links: {
     github: "",
     linkedin: "",
-    email: "",
+    email: "guilhermeedmundo55@gmail.com",
     whatsapp: "5531984746166",
     whatsappLabel: "+55 (31) 98474-6166",
   },
