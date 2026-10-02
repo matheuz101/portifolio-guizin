@@ -1,5 +1,3 @@
-/* Edite os dados neste arquivo. Campos vazios ficam indisponíveis no site.
-   Todos os caminhos são relativos ao index.html, inclusive no GitHub Pages. */
 window.PORTFOLIO_CONFIG = {
   name: "Guilherme Luiz Silva Edmundo",
   shortName: "Guilherme Luiz",
@@ -18,7 +16,7 @@ window.PORTFOLIO_CONFIG = {
     home: { src: "imgs/photo-me.jpg", position: "center 35%" },
     about: { src: "imgs/photo-me.jpg", position: "center 35%" },
   },
-  favicon: "assets/images/favicon-gl.png", // Arquivo existente; preserve a extensão real.
+  favicon: "assets/images/favicon-gl.png",
   links: {
     github: "",
     linkedin: "",
@@ -36,10 +34,10 @@ window.PORTFOLIO_CONFIG = {
       description: "Landing page da  soluçao da minha equipe na produção de nossa startup.",
       images: [{ src: "imgs/landingpage-estudeAI.png"}],
       repository: "https://github.com/matheuz101/Estude-AI-landing-page",
-      demo: "https://matheuz101.github.io/Estude-AI-landing-page/", // URL real da demonstração, como GitHub Pages. Não é deduzida.
+      demo: "https://matheuz101.github.io/Estude-AI-landing-page/",
       technologies: ["HTML", "CSS", "JavaScript"],
       publication: "GitHub",
-      provisional: false, // Altere para false após cadastrar um trabalho real.
+      provisional: false,
     },
     {
       title: "Projeto 02 — título a preencher",
