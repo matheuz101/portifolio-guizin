@@ -367,10 +367,13 @@
   function setupForm() {
     const form = $("#contact-form");
     const submit = $("#contact-submit");
+    const submitLabel = $("span", submit);
     const status = $("#form-status");
     const endpoint = webUrl(config.form?.endpoint);
+    const usesWeb3Forms = endpoint === "https://api.web3forms.com/submit";
+    const accessKey = typeof config.form?.access_key === "string" ? config.form.access_key.trim() : "";
     const customSend = typeof config.form?.send === "function" ? config.form.send : null;
-    const enabled = Boolean(endpoint || customSend);
+    const enabled = Boolean(customSend || (endpoint && (!usesWeb3Forms || accessKey)));
     submit.disabled = !enabled;
     if (enabled) $("#form-hint").textContent = "Preencha os campos para enviar sua mensagem.";
     const fields = { name: $("#contact-name"), email: $("#contact-email"), message: $("#contact-message") };
@@ -405,15 +408,23 @@
       const invalid = results.find(([, valid]) => !valid);
       if (invalid) { fields[invalid[0]].focus(); return; }
       const payload = Object.fromEntries(Object.entries(fields).map(([key, field]) => [key, field.value.trim()]));
+      if (usesWeb3Forms && !customSend) {
+        payload.access_key = accessKey;
+        payload.subject = config.form.subject || "Nova mensagem pelo portfólio";
+        payload.from_name = "Portfólio de " + config.shortName;
+      }
       submit.disabled = true;
       submit.setAttribute("aria-busy", "true");
+      form.setAttribute("aria-busy", "true");
+      submitLabel.textContent = "Enviando…";
+      Object.values(fields).forEach((field) => { field.readOnly = true; });
       report("Enviando mensagem…");
       try {
         let result;
         if (customSend) result = await customSend(payload);
         else {
           const response = await fetch(endpoint, {
-            method: "POST", headers: { "Content-Type": "application/json" },
+            method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
             body: JSON.stringify(payload), signal: AbortSignal.timeout(15000),
           });
           if (!response.ok) throw new Error("Falha no envio.");
@@ -432,6 +443,9 @@
       } finally {
         submit.disabled = false;
         submit.removeAttribute("aria-busy");
+        form.removeAttribute("aria-busy");
+        submitLabel.textContent = "Enviar mensagem";
+        Object.values(fields).forEach((field) => { field.readOnly = false; });
       }
     });
   }
